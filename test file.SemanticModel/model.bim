@@ -142,20 +142,6 @@
             "summarizeBy": "sum"
           },
           {
-            "name": "Sale Price",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "9197c91e-6d17-4e6f-8945-e0dc36fb37a2",
-            "sourceColumn": "Sale Price",
-            "summarizeBy": "sum"
-          },
-          {
             "name": "Gross Sales",
             "annotations": [
               {
@@ -321,9 +307,10 @@
                 "let",
                 " Source = Excel.Workbook(File.Contents(\"C:\\Program Files\\WindowsApps\\Microsoft.MicrosoftPowerBIDesktop_2.137.751.0_x64__8wekyb3d8bbwe\\bin\\SampleData\\Financial Sample.xlsx\"), null, true),",
                 "    financials_Table = Source{[Item=\"financials\",Kind=\"Table\"]}[Data],",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(financials_Table,{{\"Segment\", type text}, {\"Country\", type text}, {\"Product\", type text}, {\"Discount Band\", type text}, {\"Units Sold\", type number}, {\"Manufacturing Price\", Int64.Type}, {\"Sale Price\", Int64.Type}, {\"Gross Sales\", type number}, {\"Discounts\", type number}, {\" Sales\", type number}, {\"COGS\", type number}, {\"Profit\", type number}, {\"Date\", type date}, {\"Month Number\", Int64.Type}, {\"Month Name\", type text}, {\"Year\", Int64.Type}})",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(financials_Table,{{\"Segment\", type text}, {\"Country\", type text}, {\"Product\", type text}, {\"Discount Band\", type text}, {\"Units Sold\", type number}, {\"Manufacturing Price\", Int64.Type}, {\"Sale Price\", Int64.Type}, {\"Gross Sales\", type number}, {\"Discounts\", type number}, {\" Sales\", type number}, {\"COGS\", type number}, {\"Profit\", type number}, {\"Date\", type date}, {\"Month Number\", Int64.Type}, {\"Month Name\", type text}, {\"Year\", Int64.Type}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Sale Price\"})",
                 "in",
-                " #\"Changed Type\""
+                " #\"Removed Columns\""
               ],
               "type": "m"
             }
