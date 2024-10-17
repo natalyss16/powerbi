@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"financials\"]"
+        "value": "[\"financials\",\"blabla\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -45,6 +45,13 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_2c79ffa8-bacf-47f6-930e-a5b39d673f99"
+      },
+      {
+        "name": "80b984e8-2309-f929-19dc-068bc891d3cf",
+        "fromColumn": " Sales",
+        "fromTable": "financials",
+        "toColumn": "blabla",
+        "toTable": "blabla"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -190,7 +197,7 @@
             "dataType": "double",
             "lineageTag": "104694c3-366e-4922-8201-644afbe1d695",
             "sourceColumn": " Sales",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "COGS",
@@ -767,6 +774,60 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "blabla",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "blabla",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a6261787-c805-4bf6-b9ae-9829b7f4d150",
+            "sourceColumn": "blabla",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "blabla2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6bb150d3-1a7b-4ce2-a187-4da3a6d90164",
+            "sourceColumn": "blabla2",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b1374848-b54f-479e-b84c-7aea3961d0a0",
+        "partitions": [
+          {
+            "name": "blabla",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WykjNyclX0lEqzy/KSVGKjQUA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [blabla = _t, blabla2 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"blabla\", type text}, {\"blabla2\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }
