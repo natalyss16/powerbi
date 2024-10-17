@@ -1,5 +1,5 @@
 {
-  "compatibilityLevel": 1550,
+  "compatibilityLevel": 1567,
   "model": {
     "annotations": [
       {
@@ -298,6 +298,40 @@
           }
         ],
         "lineageTag": "ffd2d30c-f052-421d-9c18-645d05ef941c",
+        "measures": [
+          {
+            "name": " Sales average per Segment",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": [
+              "",
+              "AVERAGEX(",
+              "\tKEEPFILTERS(VALUES('financials'[Segment])),",
+              "\tCALCULATE(SUM('financials'[ Sales]))",
+              ")"
+            ],
+            "extendedProperties": [
+              {
+                "name": "MeasureTemplate",
+                "type": "json",
+                "value": {
+                  "daxTemplateName": "AveragePerCategory",
+                  "version": 0
+                }
+              }
+            ],
+            "lineageTag": "abb1199d-c10b-4316-a95c-e9cfda214b46"
+          }
+        ],
         "partitions": [
           {
             "name": "financials",
