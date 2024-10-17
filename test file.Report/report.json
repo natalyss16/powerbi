@@ -34,6 +34,15 @@
           "x": 9.85,
           "y": 0.00,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"57b1f651de0a8aa6ad40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":661.4871794871794,\"y\":0,\"width\":618.5128205128206,\"height\":400.4102564102564,\"z\":1}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"financials.Country\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"financials\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Country\"},\"Name\":\"financials.Country\",\"NativeReferenceName\":\"Country\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 400.41,
+          "width": 618.51,
+          "x": 661.49,
+          "y": 0.00,
+          "z": 1.00
         }
       ],
       "width": 1280.00
