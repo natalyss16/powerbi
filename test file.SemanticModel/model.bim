@@ -312,6 +312,7 @@
                 "property": "FormatString"
               }
             ],
+            "description": "natali's first measure in github",
             "expression": [
               "",
               "AVERAGEX(",
