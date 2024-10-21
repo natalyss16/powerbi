@@ -302,6 +302,21 @@
             "lineageTag": "4f00f0a2-ab67-49de-9b5f-5d1ac6e81c92",
             "sourceColumn": "Year",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "test",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "IF(financials[Year] > 2010, \"new\", \"old\")",
+            "isDataTypeInferred": true,
+            "lineageTag": "a41aa220-94d1-45e6-b934-6ee2e00fcd0b",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "ffd2d30c-f052-421d-9c18-645d05ef941c",
