@@ -34,6 +34,24 @@
           "x": 9.85,
           "y": 0.00,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4d16c291c972ebb8c745\",\"layouts\":[{\"id\":0,\"position\":{\"x\":661.3100729682127,\"y\":319.4900612262015,\"z\":2,\"width\":618.3678604378093,\"height\":400.2214207833599}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"financials.COGS\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"financials\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"COGS\"},\"Name\":\"financials.COGS\",\"NativeReferenceName\":\"COGS\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 400.22,
+          "width": 618.37,
+          "x": 661.31,
+          "y": 319.49,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"57b1f651de0a8aa6ad40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":661.4871794871794,\"y\":0,\"width\":618.5128205128206,\"height\":400.4102564102564,\"z\":1}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"financials.Country\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"financials\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Country\"},\"Name\":\"financials.Country\",\"NativeReferenceName\":\"Country\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 400.41,
+          "width": 618.51,
+          "x": 661.49,
+          "y": 0.00,
+          "z": 1.00
         }
       ],
       "width": 1280.00
